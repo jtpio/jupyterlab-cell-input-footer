@@ -1,0 +1,8 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "jupyterlab-cell-input-footer",
+  "description": "jupyterlab-cell-input-footer settings.",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false
+}
