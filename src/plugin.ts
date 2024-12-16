@@ -5,19 +5,11 @@ import {
 
 import { IEditorServices } from '@jupyterlab/codeeditor';
 
-import { 
-  INotebookTracker,
-  NotebookPanel 
-} from '@jupyterlab/notebook';
+import { INotebookTracker, NotebookPanel } from '@jupyterlab/notebook';
 
-import {
-  ContentFactoryWithFooter  
-} from './contentfactory';
+import { ContentFactoryWithFooter } from './contentfactory';
 
-import {
-  CellFooterTracker,
-  ICellFooterTracker
-} from './token';
+import { CellFooterTracker, ICellFooterTracker } from './token';
 
 /**
  * The notebook cell factory provider.
@@ -28,31 +20,28 @@ const cellFactory: JupyterFrontEndPlugin<NotebookPanel.IContentFactory> = {
   requires: [IEditorServices],
   autoStart: true,
   activate: (app: JupyterFrontEnd, editorServices: IEditorServices) => {
-    console.log("JupyterLab Plugin activated: jupyterlab-cellfooter:factory")
+    console.log('JupyterLab Plugin activated: jupyterlab-cellfooter:factory');
 
-    let editorFactory = editorServices.factoryService.newInlineEditor;
+    const editorFactory = editorServices.factoryService.newInlineEditor;
     return new ContentFactoryWithFooter({ editorFactory });
   }
 };
 
 /**
- * 
+ *
  */
 const commands: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab-cellfooter:commands',
   requires: [ICellFooterTracker],
   autoStart: true,
   activate: (app: JupyterFrontEnd, cellFooterTracker: ICellFooterTracker) => {
-    console.log("JupyterLab Plugin activated: jupyterlab-cellfooter:commands")
+    console.log('JupyterLab Plugin activated: jupyterlab-cellfooter:commands');
 
-    app.commands.addCommand(
-      'show-cell-footer', 
-      {
-        execute: (args) => {
-          cellFooterTracker.showFooter();
-        }
+    app.commands.addCommand('show-cell-footer', {
+      execute: args => {
+        cellFooterTracker.showFooter();
       }
-    )
+    });
 
     app.commands.addKeyBinding({
       command: 'show-cell-footer',
@@ -65,15 +54,14 @@ const commands: JupyterFrontEndPlugin<void> = {
 
 const token: JupyterFrontEndPlugin<ICellFooterTracker> = {
   id: 'jupyterlab-cellfooter:token',
-  description: "Plugin that provides a Cell Footer Toolbar Tracker.",
+  description: 'Plugin that provides a Cell Footer Toolbar Tracker.',
   requires: [INotebookTracker],
   provides: ICellFooterTracker,
   autoStart: true,
   activate: (app: JupyterFrontEnd, notebookTracker: INotebookTracker) => {
-    console.log("JupyterLab Plugin activated: jupyterlab-cellfooter:token")
+    console.log('JupyterLab Plugin activated: jupyterlab-cellfooter:token');
     return new CellFooterTracker(notebookTracker);
   }
 };
-
 
 export default [cellFactory, commands, token];

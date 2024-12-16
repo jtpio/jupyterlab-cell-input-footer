@@ -1,10 +1,10 @@
-#  JupyterLab Extension - cell input footer
+# JupyterLab Extension - cell input footer
 
 [![Github Actions Status](https://github.com/Zsailer/jupyterlab-cell-input-footer/workflows/Build/badge.svg)](https://github.com/Zsailer/jupyterlab-cell-input-footer/actions/workflows/build.yml)
 
 A JupyterLab extension that adds a footer to cell inputs.
 
-JupyterLab core ships with a cell footer; however, this footer is located _after_ the cell output. I needed a footer underneath the cell _input_. This plugin offers the API I needed to add UX underneath the cell input. 
+JupyterLab core ships with a cell footer; however, this footer is located _after_ the cell output. I needed a footer underneath the cell _input_. This plugin offers the API I needed to add UX underneath the cell input.
 
 ## Requirements
 
