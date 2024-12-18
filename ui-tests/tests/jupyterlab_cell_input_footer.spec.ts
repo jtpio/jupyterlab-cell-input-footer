@@ -16,9 +16,6 @@ test('should emit an activation console message', async ({ page }) => {
   await page.goto();
 
   expect(
-    logs.filter(
-      s =>
-        s === 'JupyterLab extension jupyterlab-cell-input-footer is activated!'
-    )
+    logs.filter(s => s === 'jupyterlab-cell-input-footer activated!')
   ).toHaveLength(1);
 });

@@ -12,5 +12,5 @@ except ImportError:
 def _jupyter_labextension_paths():
     return [{
         "src": "labextension",
-        "dest": "jupyterlab-cell-input-footer"
+        "dest": "jupyterlab-cell-input-footer-extension"
     }]
