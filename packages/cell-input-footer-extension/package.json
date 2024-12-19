@@ -1,6 +1,6 @@
 {
     "name": "jupyterlab-cell-input-footer-extension",
-    "version": "0.2.0-alpha.0",
+    "version": "0.2.0-beta.0",
     "description": "JupyterLab Plugin providing a global event listener.",
     "keywords": [
         "jupyter",
@@ -58,7 +58,7 @@
     "dependencies": {
         "@jupyterlab/application": "^4.0.0",
         "@jupyterlab/services": "^7.0.0",
-        "jupyterlab-cell-input-footer": "^0.2.0-alpha.0",
+        "jupyterlab-cell-input-footer": "^0.2.0-beta.0",
         "jupyterlab-eventlistener": "^0.4.0-alpha.0"
     },
     "devDependencies": {
