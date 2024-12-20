@@ -2,11 +2,25 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.2.1
+
+([Full Changelog](https://github.com/Zsailer/jupyterlab-cell-input-footer/compare/jupyterlab-cell-input-footer-extension@0.2.0...e73ab03990e6c518616cf1eeb4ebc7c380c6b9df))
+
+### Bugs fixed
+
+- move CSS to the extension package [#2](https://github.com/Zsailer/jupyterlab-cell-input-footer/pull/2) ([@Zsailer](https://github.com/Zsailer))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/Zsailer/jupyterlab-cell-input-footer/graphs/contributors?from=2024-12-19&to=2024-12-20&type=c))
+
+[@Zsailer](https://github.com/search?q=repo%3AZsailer%2Fjupyterlab-cell-input-footer+involves%3AZsailer+updated%3A2024-12-19..2024-12-20&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.2.0
 
 No merged PRs
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.2.0rc0
 
