@@ -1,6 +1,7 @@
 import { Panel, Widget } from '@lumino/widgets';
 
 import { ToolbarButton, closeIcon, Toolbar } from '@jupyterlab/ui-components';
+import { find, map } from '@lumino/algorithm';
 
 export const CELL_FOOTER_ID = 'jp-cellfooter';
 
@@ -14,7 +15,6 @@ export class CellFooterWidget extends Panel {
     this.toolbar = new Toolbar();
     this.toolbar.addClass('jp-cellfooter-toolbar');
     this.toolbar.addItem('spacer', Toolbar.createSpacerItem());
-    // const that = this;
     this.toolbar.addItem(
       'clear',
       new ToolbarButton({
@@ -28,11 +28,32 @@ export class CellFooterWidget extends Panel {
     this.addWidget(this.toolbar);
   }
 
-  addItemOnLeft(name: string, item: Widget) {
+  addToolbarItemOnLeft(name: string, item: Widget) {
     this.toolbar?.insertBefore('spacer', name, item);
   }
 
-  addItemOnRight(name: string, item: Widget) {
+  addToolbarItemOnRight(name: string, item: Widget) {
     this.toolbar?.insertBefore('clear', name, item);
+  }
+
+  removeToolbarItem(name: string) {
+    if (!this.toolbar) {
+      return;
+    }
+    const nameWithWidget = map(this.toolbar.names(), (widgetName, i) => {
+      return { name: widgetName, index: i };
+    });
+    const item = find(nameWithWidget, x => x.name === name);
+    if (!item) {
+      return;
+    }
+    const widget = [...this.toolbar.children()][item.index];
+    // Dispose of the widget
+    widget.dispose();
+  }
+
+  removeWidget(className: string) {
+    const widget = this.widgets.find(w => w.hasClass(className));
+    widget?.dispose();
   }
 }
