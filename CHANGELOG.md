@@ -2,6 +2,12 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.3.0
+
+No merged PRs
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.3.0alpha0
 
 ([Full Changelog](https://github.com/Zsailer/jupyterlab-cell-input-footer/compare/jupyterlab-cell-input-footer-extension@0.2.1...d3f6424ad6d80331346f7ff113cdcd3c9722ef1b))
@@ -19,8 +25,6 @@
 ([GitHub contributors page for this release](https://github.com/Zsailer/jupyterlab-cell-input-footer/graphs/contributors?from=2024-12-20&to=2025-01-03&type=c))
 
 [@Zsailer](https://github.com/search?q=repo%3AZsailer%2Fjupyterlab-cell-input-footer+involves%3AZsailer+updated%3A2024-12-20..2025-01-03&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.2.1
 
