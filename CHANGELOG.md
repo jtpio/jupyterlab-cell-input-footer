@@ -2,6 +2,26 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.3.0alpha0
+
+([Full Changelog](https://github.com/Zsailer/jupyterlab-cell-input-footer/compare/jupyterlab-cell-input-footer-extension@0.2.1...d3f6424ad6d80331346f7ff113cdcd3c9722ef1b))
+
+### Enhancements made
+
+- Add a richer API interface for cell footers [#3](https://github.com/Zsailer/jupyterlab-cell-input-footer/pull/3) ([@Zsailer](https://github.com/Zsailer))
+
+### Maintenance and upkeep improvements
+
+- Relax the releaser script [#4](https://github.com/Zsailer/jupyterlab-cell-input-footer/pull/4) ([@Zsailer](https://github.com/Zsailer))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/Zsailer/jupyterlab-cell-input-footer/graphs/contributors?from=2024-12-20&to=2025-01-03&type=c))
+
+[@Zsailer](https://github.com/search?q=repo%3AZsailer%2Fjupyterlab-cell-input-footer+involves%3AZsailer+updated%3A2024-12-20..2025-01-03&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.2.1
 
 ([Full Changelog](https://github.com/Zsailer/jupyterlab-cell-input-footer/compare/jupyterlab-cell-input-footer-extension@0.2.0...e73ab03990e6c518616cf1eeb4ebc7c380c6b9df))
@@ -15,8 +35,6 @@
 ([GitHub contributors page for this release](https://github.com/Zsailer/jupyterlab-cell-input-footer/graphs/contributors?from=2024-12-19&to=2024-12-20&type=c))
 
 [@Zsailer](https://github.com/search?q=repo%3AZsailer%2Fjupyterlab-cell-input-footer+involves%3AZsailer+updated%3A2024-12-19..2024-12-20&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.2.0
 
