@@ -13,8 +13,9 @@ export const ICellFooterTracker = new Token<ICellFooterTracker>(
 
 export interface ICellFooterTracker {
   getFooter(cellId?: string): CellFooterWidget | undefined;
-  addItemOnLeft(options: CellFooterTracker.IOptions): void;
-  addItemOnRight(options: CellFooterTracker.IOptions): void;
+  addToolbarItemOnLeft(options: CellFooterTracker.IOptions): void;
+  addToolbarItemOnRight(options: CellFooterTracker.IOptions): void;
+  removeToolbarItem(options: CellFooterTracker.IOptions): void;
   hideFooter(cellId?: string): void;
   showFooter(cellId?: string): void;
 }
@@ -23,7 +24,7 @@ export namespace CellFooterTracker {
   export interface IOptions {
     cellId: string | undefined;
     name: string;
-    item: Widget;
+    item?: Widget;
   }
 }
 
@@ -54,9 +55,11 @@ export class CellFooterTracker implements ICellFooterTracker {
    *
    * @param options
    */
-  addItemOnLeft(options: CellFooterTracker.IOptions) {
+  addToolbarItemOnLeft(options: CellFooterTracker.IOptions) {
     const toolbar = this.getFooter(options.cellId);
-    toolbar?.addItemOnLeft(options.name, options.item);
+    if (options.item) {
+      toolbar?.addToolbarItemOnLeft(options.name, options.item);
+    }
   }
 
   /**
@@ -64,9 +67,21 @@ export class CellFooterTracker implements ICellFooterTracker {
    *
    * @param options
    */
-  addItemOnRight(options: CellFooterTracker.IOptions) {
+  addToolbarItemOnRight(options: CellFooterTracker.IOptions) {
     const toolbar = this.getFooter(options.cellId);
-    toolbar?.addItemOnRight(options.name, options.item);
+    if (options.item) {
+      toolbar?.addToolbarItemOnRight(options.name, options.item);
+    }
+  }
+
+  /**
+   * Removes a toolbar item from the cell footer.
+   *
+   * @param options
+   */
+  removeToolbarItem(options: CellFooterTracker.IOptions) {
+    const toolbar = this.getFooter(options.cellId);
+    toolbar?.removeToolbarItem(options.name);
   }
 
   /**
