@@ -2,11 +2,25 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.3.1
+
+([Full Changelog](https://github.com/Zsailer/jupyterlab-cell-input-footer/compare/jupyterlab-cell-input-footer-extension@0.3.0...af5574f4d0ffc43091ac1ae28d766cf43992b003))
+
+### Maintenance and upkeep improvements
+
+- Remove unnecessary shortcut [#5](https://github.com/Zsailer/jupyterlab-cell-input-footer/pull/5) ([@Zsailer](https://github.com/Zsailer))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/Zsailer/jupyterlab-cell-input-footer/graphs/contributors?from=2025-01-03&to=2025-01-08&type=c))
+
+[@Zsailer](https://github.com/search?q=repo%3AZsailer%2Fjupyterlab-cell-input-footer+involves%3AZsailer+updated%3A2025-01-03..2025-01-08&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.3.0
 
 No merged PRs
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.3.0alpha0
 
