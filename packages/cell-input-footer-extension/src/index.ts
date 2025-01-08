@@ -45,13 +45,6 @@ const commands: JupyterFrontEndPlugin<void> = {
         cellFooterTracker.showFooter();
       }
     });
-
-    app.commands.addKeyBinding({
-      command: 'show-cell-footer',
-      args: {},
-      keys: ['Shift Cmd M'],
-      selector: '.jp-Notebook'
-    });
   }
 };
 
