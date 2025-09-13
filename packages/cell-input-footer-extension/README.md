@@ -1,1 +1,1 @@
-# Event Listener Extension
+# jupyterlab-cell-input-footer extension
