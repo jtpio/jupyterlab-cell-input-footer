@@ -1,1 +1,1 @@
-# Event Listener API
+# jupyterlab-cell-input-footer API
